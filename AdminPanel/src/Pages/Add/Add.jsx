@@ -1,11 +1,15 @@
-import React, {  useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import "./Add.css";
 import { assets } from '../../assets/assets';
 import axios from "axios";
+import { toast } from 'react-toastify';
+
 
 
 
 const Add = () => {
+
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const [image,setImage]=useState(false);
   const [data,setData]=useState({
@@ -23,7 +27,7 @@ const Add = () => {
   }
 
   const onSubmitHandler=async (event)=>{
-    const apiUrl = import.meta.env.VITE_API_URL;
+    
    
     event.preventDefault();
     const formData=new FormData();
@@ -38,14 +42,16 @@ const Add = () => {
     if(response.data.success){
       console.log("successfully stored");
       setData({
-    name:"",
-    description:"",
-    price:"",
-    category:"Salad"
-  });
-  setImage(false);
+        name:"",
+        description:"",
+        price:"",
+        category:"Salad"
+      });
+      setImage(false);
+      toast.success(response.data.message);
 
     }else{
+      toast.error(response.data.message);
 
     }
 
