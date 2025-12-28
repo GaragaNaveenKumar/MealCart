@@ -11,6 +11,8 @@ Frontend/node_modules
 Backend/node_modules
 Backend/.env
 AdminPanel/node_modules
+Frontend/.env
+AdminPanel/.env
 
 
 dist
