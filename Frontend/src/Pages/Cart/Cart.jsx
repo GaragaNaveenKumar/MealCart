@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 
 const Cart = () => {
   const { cartItems, food_list, removeCartItem,getTotalCartAmount} = useContext(StoreContext);
-
+  const apiUrl=import.meta.env.VITE_API_URL;
   const navigate=useNavigate();
 
   return (
@@ -26,7 +26,7 @@ const Cart = () => {
             return (
               <div>
                 <div className="cart-items-title cart-items-item">
-                  <img src={item.image} alt="" />
+                  <img src={apiUrl+"/images/"+item.image} alt="" />
                   <p>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{cartItems[item._id]}</p>

@@ -7,11 +7,12 @@ const FoodItem = ({id,name,price,description,image}) => {
 
 
     const {cartItems,addToCart,removeCartItem}=useContext(StoreContext);
+    const apiUrl = import.meta.env.VITE_API_URL;
 
   return (
     <div className='food-item'>
         <div className="food-item-img-container">
-            <img className='food-item-image' src={image} alt="" />
+            <img className='food-item-image' src={apiUrl+"/images/"+image} alt="" />
             {!cartItems[id]
             ?<img className='add' onClick={()=>addToCart(id)} src={assets.add_icon_white} alt=''/>
             :<div className='food-item-counter'>
