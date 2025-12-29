@@ -131,7 +131,7 @@ VITE_BACKEND_URL=https://your-backend-url
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/your-username/mealcart.git
+git clone https://github.com/GaragaNaveenKumar/MealCart.git
 cd mealcart
 ```
 
@@ -198,7 +198,13 @@ npm run dev
 
 **Naveen Kumar Garaga**
 📧 Email: [naveenkumargaraga@gmail.com](mailto:naveenkumargaraga@gmail.com)
-🔗 GitHub | LinkedIn
+🔗 <a href="https://github.com/GaragaNaveenKumar" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="https://www.linkedin.com/in/naveen-kumar-garaga/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
 
 ---
 
