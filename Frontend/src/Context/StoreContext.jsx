@@ -20,6 +20,7 @@ const StorecontextProvider=(props)=>{
         if(!token){
             alert("Please sign in to add into card");
             navigate("/");
+            return;
         }
         if(!cartItems[itemId]){
             setCartItems((prev)=>({...prev,[itemId]:1}));
