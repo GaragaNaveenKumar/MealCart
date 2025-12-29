@@ -21,7 +21,7 @@ const StorecontextProvider=(props)=>{
             alert("Please sign in to add into card");
             navigate("/");
             return;
-        }
+        }else{
         if(!cartItems[itemId]){
             setCartItems((prev)=>({...prev,[itemId]:1}));
         }else{
@@ -29,7 +29,7 @@ const StorecontextProvider=(props)=>{
         }
         if(token){
             await axios.post(apiUrl+"/api/cart/add",{itemId},{headers:{token}});
-        }
+        }}
     }
 
     const removeCartItem=async (itemId)=>{
