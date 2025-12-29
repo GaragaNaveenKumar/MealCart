@@ -1,12 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../Context/StoreContext.jsx";
 import {useNavigate} from "react-router-dom";
 
 const Cart = () => {
-  const { cartItems, food_list, removeCartItem,getTotalCartAmount} = useContext(StoreContext);
+  const { cartItems, food_list, removeCartItem,getTotalCartAmount,token} = useContext(StoreContext);
   const apiUrl=import.meta.env.VITE_API_URL;
   const navigate=useNavigate();
+
+  useEffect(()=>{
+    if(!token){
+      alert("Please Sign in to access cart");
+      navigate("/");
+    }
+  },[])
 
   return (
     <div className="cart">
